@@ -9,7 +9,3 @@ git clone <Platzhalter>
 cd <Platzhalter>
 code .
 ```
-
-```csharp
-var string = "zeile1\nzeile2"
-```
