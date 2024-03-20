@@ -1,0 +1,32 @@
+/* CSS-Selektoren */
+/* 
+    Element-Selektoren => body, main, p, img, h1, h2,...
+    Class-Selektor => .card, .header, .buxtehude
+    Id-Selektor => #card1, #theme-toggle, #submit-btn
+    Attribute-Selektor => todo
+*/
+body {
+    background-color: #8c8c8c;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-style: italic;
+}
+
+main {
+    margin: 20px;
+}
+
+li.fette-liste {
+    font-weight: 900;
+}
+
+li.custom-list-item {
+    margin: 15px;
+}
+
+h1#main-title {
+    font-size: 2em;
+    text-shadow: 5px 5px 5px #fefefe;
+    font-style: normal;
+}
