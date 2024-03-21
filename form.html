@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <style>
+      form {
+        max-width: 500px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- action => die URL/URI zu dem server, der das formular auswertet. -->
+    <!-- method sollte post sein, aus debugging-gründen in diesem fall get. -->
+    <form action="/formsubmit" method="get">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" />
+      <label for="password">Passwort</label>
+      <input type="password" name="password" id="password" />
+
+      <label for="birthdate">Geburtsdatum</label>
+      <input type="date" name="birthdate" id="birthdate" />
+
+      <label for="email">Email</label>
+      <input
+        pattern="[\w\-_\.]+@[\w]+\.[\w]{2,4}"
+        type="email"
+        name="email"
+        id="email"
+      />
+
+      <input type="reset" value="Reset!" />
+      <input type="submit" value="Abschicken!" />
+    </form>
+  </body>
+</html>
+
+<script>
+  function PostForm(formular) {
+    var user = new User(formular.username, formular.passwort);
+  }
+</script>
