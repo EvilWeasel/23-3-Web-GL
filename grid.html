@@ -7,11 +7,19 @@
     <style>
       body {
         background-color: #6c6c6c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       .grid-container {
+        display: grid;
+        grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+        gap: 20px;
+        /* Zentrieren auf X- und Y-Achse
+          place-items: center;
+         */
       }
       .card {
-        width: 300px;
         color: #fefefe;
         background-color: rgb(96, 89, 106);
         border-radius: 30px;
@@ -46,6 +54,9 @@
         text-align: center;
         margin: 10px 0 30px 0;
       }
+      .grid-container > :first-child {
+        grid-column: span 2;
+      }
     </style>
   </head>
   <body>
@@ -56,8 +67,8 @@
           alt="Card1 Image"
         />
         <div class="card-text">
-          <h3>HEADPHONE</h3>
-          <p class="price">29,99</p>
+          <h3>OMA</h3>
+          <p class="price">420,99</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
         </div>
       </div>
