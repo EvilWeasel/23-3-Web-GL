@@ -9,3 +9,7 @@ git clone <Platzhalter>
 cd <Platzhalter>
 code .
 ```
+
+## HTTP und Webstandards
+
+![](HTTPundWebstandards-HTTP.svg)
