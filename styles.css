@@ -36,7 +36,7 @@ h1#main-title {
     /* 1em => 1x font-size direkten parents => 
         16px (browserdefault) x 1.5 rem (body) x 2em ==> 48px
     */
-    font-size: 2em;
+    font-size: 3em;
     text-shadow: 2px 2px 2px black;
     font-style: normal;
 }
