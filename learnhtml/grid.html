@@ -13,7 +13,12 @@
       }
       .grid-container {
         display: grid;
+        /* grid-template nimmt eine liste an Werten entgegen. Je Wert wird eine Spalte erstellt.
+        Mit minmax() können wir eine min-width und max-width für die Spalten einstellen.
+        1fr => Eine Fraktion. 
+        In diesem Fall min-width 300px, max-width: automatisch, soviel Platz wie verfügbar, gleichmäßig aufgeteilt zwischen beiden Columns. */
         grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+        /* Innere Margin zwischen allen Zellen im Grid */
         gap: 20px;
         /* Zentrieren auf X- und Y-Achse
           place-items: center;
@@ -23,6 +28,7 @@
         color: #fefefe;
         background-color: rgb(96, 89, 106);
         border-radius: 30px;
+        /* Schatteneffekt für die Box (das ganze Elem); Nicht verwechseln mit text-shadow */
         box-shadow: 5px 5px 5px rgb(56, 52, 61);
       }
       .card > img {
