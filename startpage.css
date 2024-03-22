@@ -1,0 +1,53 @@
+:root {
+    --primary-color: rgb(255, 13, 178);
+    --accent-color: rgb(163, 22, 234);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+#clock {
+    margin-top: 10vh;
+    margin-bottom: 15px;
+    font-size: 4em;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 3px black;
+}
+
+#clock,
+#joke {
+    text-align: center;
+}
+
+main > .link-container {
+    border: 5px double var(--accent-color);
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(0,0,0,.5);
+    font-size: 1.3em;
+    min-width: 225px;
+}
+
+.link-container > h3 {
+    margin-top: 10px;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 3px black;
+    font-size: 1.5em;
+}
+
+.link-container > ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.link-container > ul > li > a {
+    color: #fefefe;
+    text-decoration: none;
+}
