@@ -15,14 +15,20 @@
           rgba(14, 173, 177, 1) 100%
         );
         background-repeat: no-repeat;
-        height: 100vh;
+        min-height: 100vh;
         margin: 0;
         padding: 0;
         color: #fefefe;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       form {
         display: grid;
-        width: 600px;
+        /* width: 600px; */
+        min-width: 650px;
+        max-width: 1000px;
         grid-template-columns: 1fr 1fr;
         font-size: 1.2rem;
         gap: 20px;
@@ -30,12 +36,29 @@
       }
       form > h2 {
         grid-column: span 2;
+        text-shadow: var(--text-shadow);
+        border-bottom: 2px solid #8c8c8c;
+        padding-bottom: 20px;
+        margin-bottom: 0;
       }
       form > p {
         grid-column: span 2;
+        margin: 5px 15px;
+        font-style: italic;
       }
       form > input[type="submit"] {
         grid-column: span 2;
+        padding: 10px;
+        font-size: 1.2em;
+        font-weight: 600;
+        border-radius: 10px;
+        color: white;
+        background: linear-gradient(
+          to right,
+          rgb(172, 6, 108) 0%,
+          rgb(95, 4, 95) 100%
+        );
+        text-shadow: var(--text-shadow);
       }
       form > .formgroup {
         display: flex;
@@ -45,7 +68,7 @@
       form > .formgroup > label {
         font-size: 1.2em;
         font-weight: 600;
-        text-shadow: 1px 1px 4px black;
+        text-shadow: var(--text-shadow);
       }
       form > .formgroup > input {
         font-size: 0.9em;
@@ -57,13 +80,21 @@
       }
       .radiogroup > #gender-title {
         font-size: 1.3em;
+        font-weight: 600;
         margin-bottom: 15px;
+        text-shadow: var(--text-shadow);
       }
       .radiogroup > label {
         margin-right: 20px;
         font-size: 1.1em;
-        text-shadow: ;
+        text-shadow: var(--text-shadow);
       }
+
+      /* @media only screen and (max-width: 650px) {
+        form {
+          grid-template-columns: 1fr;
+        }
+      } */
     </style>
   </head>
   <body>
@@ -133,7 +164,7 @@
         <label for="other">Other</label>
       </div>
       <p>
-        By clcking Sign Up, you agree to our Terms, Privacy Policy and Cookies
+        By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies
         Policy. You may receive SMS notifications from us and can opt out at any
         time.
       </p>
