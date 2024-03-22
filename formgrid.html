@@ -4,6 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
+    <style>
+      :root {
+        --text-shadow: 1px 1px 4px black;
+      }
+      body {
+        background: linear-gradient(
+          180deg,
+          rgba(55, 7, 59, 1) 0%,
+          rgba(14, 173, 177, 1) 100%
+        );
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: #fefefe;
+      }
+      form {
+        display: grid;
+        width: 600px;
+        grid-template-columns: 1fr 1fr;
+        font-size: 1.2rem;
+        gap: 20px;
+        margin: 40px;
+      }
+      form > h2 {
+        grid-column: span 2;
+      }
+      form > p {
+        grid-column: span 2;
+      }
+      form > input[type="submit"] {
+        grid-column: span 2;
+      }
+      form > .formgroup {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      form > .formgroup > label {
+        font-size: 1.2em;
+        font-weight: 600;
+        text-shadow: 1px 1px 4px black;
+      }
+      form > .formgroup > input {
+        font-size: 0.9em;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      .radiogroup {
+        grid-column: span 2;
+      }
+      .radiogroup > #gender-title {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+      }
+      .radiogroup > label {
+        margin-right: 20px;
+        font-size: 1.1em;
+        text-shadow: ;
+      }
+    </style>
   </head>
   <body>
     <form action="/formresult" method="get">
@@ -63,7 +124,7 @@
         />
       </div>
       <div class="radiogroup">
-        <div>Gender</div>
+        <div id="gender-title">Gender</div>
         <input type="radio" name="gender" id="male" value="male" />
         <label for="male">Male</label>
         <input type="radio" name="gender" id="female" value="female" />
