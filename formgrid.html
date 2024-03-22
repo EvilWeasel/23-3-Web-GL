@@ -90,11 +90,19 @@
         text-shadow: var(--text-shadow);
       }
 
-      /* @media only screen and (max-width: 650px) {
+      @media only screen and (max-width: 650px) {
         form {
           grid-template-columns: 1fr;
+          min-width: fit-content;
+          margin: 20px;
         }
-      } */
+        form > h2,
+        .radiogroup,
+        form > input[type="submit"],
+        form > p {
+          grid-column: auto;
+        }
+      }
     </style>
   </head>
   <body>
