@@ -3,9 +3,21 @@
     --accent-color: rgb(163, 22, 234);
 }
 
+@font-face {
+    font-family: HackerFont;
+    src: url('./assets/Matrix-MZ4P.ttf');
+}
+
 body {
     margin: 0;
     padding: 0;
+    padding-top: 10vh;
+    background-image: url('./assets/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    overflow-y: hidden;
 }
 
 main {
@@ -14,11 +26,12 @@ main {
 }
 
 #clock {
-    margin-top: 10vh;
     margin-bottom: 15px;
+    font-weight: 700;
     font-size: 4em;
     color: var(--primary-color);
     text-shadow: 2px 2px 3px black;
+    font-family: HackerFont, Impact, sans-serif;
 }
 
 #clock,
@@ -30,9 +43,9 @@ main > .link-container {
     border: 5px double var(--accent-color);
     border-radius: 10px;
     padding: 15px;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.8);
     font-size: 1.3em;
-    min-width: 225px;
+    min-width: 200px;
 }
 
 .link-container > h3 {
@@ -48,6 +61,12 @@ main > .link-container {
 }
 
 .link-container > ul > li > a {
-    color: #fefefe;
+    color: #8c8c8c;
     text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+.link-container > ul > li > a:hover {
+    color: var(--primary-color);
+    font-size: 1.1em;
 }
