@@ -3,11 +3,6 @@
     --accent-color: rgb(163, 22, 234);
 }
 
-@font-face {
-    font-family: HackerFont;
-    src: url('./assets/Matrix-MZ4P.ttf');
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -45,7 +40,8 @@ main > .link-container {
     padding: 15px;
     background-color: rgba(0,0,0,.8);
     font-size: 1.3em;
-    min-width: 200px;
+    min-width: 190px;
+    width: 300px;
 }
 
 .link-container > h3 {
@@ -61,12 +57,53 @@ main > .link-container {
 }
 
 .link-container > ul > li > a {
+    font-family: Roboto;
+    font-weight: 500;
+    font-style: italic;
     color: #8c8c8c;
     text-decoration: none;
     transition: all .5s ease-in-out;
+    /* margin: 0 15px 0 0; */
 }
 
 .link-container > ul > li > a:hover {
     color: var(--primary-color);
-    font-size: 1.1em;
+    /* font-size: 1.1em;
+    margin: 0; */
+}
+
+.joke-container {
+    display: flex;
+    justify-content: center;
+}
+
+p#joke {
+    background-color: rgba(0,0,0,.7);
+    font-size: 1.5em;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 5px rgba(137, 12, 66, 0.678);
+    font-family: Roboto, sans-serif;
+    font-style: italic;
+}
+
+p#joke::before {
+    content: "> ";
+}
+
+@media only screen and (max-width: 940px) {
+    body {
+        overflow-y: scroll;
+        height: fit-content;
+        background-image: url('./assets/background-mobile.jpg');
+        padding-top: 2rem;
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 }
